@@ -4,15 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/home.css" rel="stylesheet">
+  <link href="/css/home.css" rel="stylesheet">
+  <link href="/css/body.css" rel="stylesheet">
+  <link href="/css/search.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="/icon/file_type_video_icon_130090.png" />
   <title>Ejercicio Api</title>
 </head>
 <body>
 
-  <div id="countries"></div>
-  <div id="countries1"></div>
-  <div id="countries2"></div>
+  <div id="header" class="header">
+    <p>Bienvenidos al VideoClub Rados</p>
+  </div>
+  <div class="searchVar">
+    <label>Burcar Película: </label>
+    <input type="text" id="input" class="input" placeholder="Regreso al futuro">
+    <button class="searchButton" onkeypress="searchButton()">Buscar</button>
+  </div>
+
+  <!-- Primer screen -->
+
+  <div class="containerHome" id="screenHome" style="display: grid;">
+    <div id="movies" class="containerMovies"></div>      
+  </div>
+
+  <!-- Segundo screen -->
+
+  <div class="containerShowSearch" id="screenSearch" style="display: none;">
+    <button class="homeButton" onclick="homeButton()">Volver</button>
+  </div>
 
   <script lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-  <script src="js/practicaAxios.js"></script>
+  <script src="js/homeMovies.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/buttons.js"></script>
 </body>
 </html>
