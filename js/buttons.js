@@ -1,23 +1,29 @@
+const searchButton = async () => {
 
-const homeButton = () => {
+  const inputSearch = document.getElementById("input");
+  inputSearch.innerHTML = "";
 
-  switchScreenHome("screenHome","screenSearch");
+  let query = searchDiv.value;
+
+  let url = `${base_url}${source}/${criterio}?api_key=${key}&query=${query}`;
+
+  let movies = await call( url );
+
+  draw( movies );
+    
+  switchScreenSearchResult("screenHome","screenSearch");
 };
 
-let switchScreenHome = (actualStage,futureStage) => {
-  let actualScreen = document.getElementById(actualStage);
+const searchById = async () => {
 
-  let futureScreen = document.getElementById(futureStage);
+  let query = searchID.value;
 
-  actualScreen.style.display = "grid";
-  futureScreen.style.display = "none";
-};
+  let url = `${base_url}${criterio}/${query}?api_key=${key}&language=es-ES`; 
 
-let switchScreenSearchResult = (actualStage,futureStage) => {
-  let actualScreen = document.getElementById(actualStage);
+  let movies = await call( url );
 
-  let futureScreen = document.getElementById(futureStage);
+  draw( movies );
 
-  actualScreen.style.display = "none";
-  futureScreen.style.display = "grid";
+  switchScreenSearchResult("screenHome","screenSearch");
+
 };

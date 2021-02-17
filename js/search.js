@@ -49,32 +49,3 @@ const draw = async ( drawCollection ) => {
   };
 };
 
-const searchButton = async () => {
-
-  let query = searchDiv.value;
-
-
-
-  let url = `${base_url}${source}/${criterio}?api_key=${key}&query=${query}`;
-
-  let movies = await call( url );
-
-  draw( movies );
-    
-  switchScreenSearchResult("screenHome","screenSearch");
-};
-
-const searchById = async () => {
-
-  let query = searchID.value;
-    
-  let url = `${base_url}${criterio}/${query}?api_key=${key}&language=es-ES`; 
-
-  let movies = await call( url );
-
-
-  draw( movies );
-
-  switchScreenSearchResult("screenHome","screenSearch");
-
-};
