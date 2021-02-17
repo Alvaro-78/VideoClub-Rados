@@ -2,3 +2,71 @@ body {
   background-color: black;
   color: red
 }
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 2em;
+  font-size: 3em;
+}
+
+@media screen and ( max-width: 600px ) {
+  .header {
+    font-size: 1em;
+  }
+}
+
+label {
+  font-size: 20px;
+  margin-right: .5em;
+}
+
+input {
+  border-radius: 10px;
+}
+
+.searchVar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 3em;
+}
+
+.searchButton {
+  margin-left: 1em;
+  width: 5em;
+  height: 2.5em;
+  border-radius: 10px;
+}
+
+.searchID {
+  margin-left: 1em;
+  width: 5em;
+  height: 2.5em;
+  border-radius: 10px;
+}
+
+.searchID:hover {
+  background-color:red;
+  cursor: pointer;
+ }
+
+.searchButton:hover {
+ background-color:red;
+ cursor: pointer;
+}
+
+.input {
+  width: 10em;
+  height: 2em;
+  font-size: 15px;
+}
+
+.inputId {
+  margin-left: 1em;
+  height: 2em;
+  font-size: 15px;
+}

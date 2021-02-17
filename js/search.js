@@ -1,9 +1,11 @@
 
 let searchDiv = document.getElementById("input");
 
+let searchID = document.getElementById("inputID");
+
 let key = "c0b6dea31a9d647a6b7d1eafa59bacaa";
 
-let source = "search/multi";
+let source = "search";
 
 let criterio = "movie";
 
@@ -30,6 +32,7 @@ const draw = async ( drawCollection ) => {
 
     //Proceso para el pintado HTML de las películas
   const divPelisDomElement = document.getElementById("screenSearch");
+  divPelisDomElement.innerHTML = "";
   
   if (Array.isArray(drawCollection)) {
     drawCollection.forEach(pelicula => {
@@ -46,17 +49,32 @@ const draw = async ( drawCollection ) => {
   };
 };
 
-const searchButton = async (event) => {
-   
-    let query = searchDiv.value;
-  
-    let url = `${base_url}${source}?api_key=${key}&query=${query}`;
-    let movies = await call( url );
-  
-    draw( movies );
+const searchButton = async () => {
+
+  let query = searchDiv.value;
+
+
+
+  let url = `${base_url}${source}/${criterio}?api_key=${key}&query=${query}`;
+
+  let movies = await call( url );
+
+  draw( movies );
     
-    switchScreenSearchResult("screenHome","screenSearch");
+  switchScreenSearchResult("screenHome","screenSearch");
 };
 
-// divPelisDomElement.innerHTML += `<div id='peliculas'>
-//             <img src='https://image.tmdb.org/t/p/w500${pelicula.poster_path}'></img><h2>${pelicula.title}</h2><p>${pelicula.overview}</p></div>`
+const searchById = async () => {
+
+  let query = searchID.value;
+    
+  let url = `${base_url}${criterio}/${query}?api_key=${key}&language=es-ES`; 
+
+  let movies = await call( url );
+
+
+  draw( movies );
+
+  switchScreenSearchResult("screenHome","screenSearch");
+
+};

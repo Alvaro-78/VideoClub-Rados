@@ -19,7 +19,11 @@
   <div class="searchVar">
     <label>Burcar Película: </label>
     <input type="text" id="input" class="input" placeholder="Regreso al futuro">
-    <button class="searchButton" onkeypress="searchButton()">Buscar</button>
+    <button class="searchButton" onclick="searchButton()">Buscar</button>
+
+    <input type="text" id="inputID" class="inputId" placeholder="Regreso al futuro">
+    <button class="searchID" onclick="searchById()"> por ID</button>
+
   </div>
 
   <!-- Primer screen -->
@@ -35,7 +39,7 @@
   </div>
 
   <script lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-  <script src="js/homeMovies.js"></script>
+    <script src="js/homeMovies.js"></script>
   <script src="js/search.js"></script>
   <script src="js/buttons.js"></script>
 </body>
