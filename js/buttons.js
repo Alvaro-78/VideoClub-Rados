@@ -27,3 +27,9 @@ const searchById = async () => {
   switchScreenSearchResult("screenHome","screenSearch");
 
 };
+
+
+const homeButton = () => {
+
+  switchScreenHome("screenHome","screenSearch");
+};

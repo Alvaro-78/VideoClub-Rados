@@ -1,4 +1,4 @@
-let promise = axios.get( 'http://api.themoviedb.org/3/movie/popular?api_key=c0b6dea31a9d647a6b7d1eafa59bacaa' );
+let promise = axios.get( 'https://api.themoviedb.org/3/movie/popular?api_key=c0b6dea31a9d647a6b7d1eafa59bacaa' );
 
 // Promesa de un array de pelis
 

@@ -1,8 +1,5 @@
 
-const homeButton = () => {
 
-  switchScreenHome("screenHome","screenSearch");
-};
 
 let switchScreenHome = (actualStage,futureStage) => {
 
