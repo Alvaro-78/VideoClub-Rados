@@ -59,6 +59,18 @@ input {
  cursor: pointer;
 }
 
+.homeButton {
+  margin-left: 1em;
+  width: 5em;
+  height: 2.5em;
+  border-radius: 10px;
+}
+
+.homeButton:hover {
+  background-color:red;
+  cursor: pointer;
+}
+
 .input {
   width: 10em;
   height: 2em;
